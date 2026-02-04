@@ -122,7 +122,7 @@ nav h2{
 
 .date{
   float:right;
-  opacity:.8;
+  font-size: 20px;
 }
 
 .teams{
@@ -155,3 +155,4 @@ nav h2{
   .teams{font-size:1.4rem}
   .teams img{width:36px}
 }
+
