@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
+
+body{
+  background:linear-gradient(180deg,#020024,#040b2a,#000);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(10px);
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav h2{
+  font-weight:800;
+  color:#00c6ff;
+}
+
+/* HERO */
+.hero{
+  height:130vh;
+  background:url(Hero.jpg)no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  text-align:center;
+  /* padding-left: 200px; */
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  padding-left: 200px;
+}
+
+.hero h1{
+  position:relative;
+  font-size:4rem;
+  font-weight:800;
+  letter-spacing:2px;
+  
+}
+
+/* SECTION TITLE */
+.section-title{
+  text-align:center;
+  font-size:3rem;
+  font-weight:800;
+  margin:80px 0 40px;
+  color:#00c6ff;
+}
+
+/* TIMELINE */
+.timeline{
+  position:relative;
+  padding:40px 8% 80px;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50px;
+  top:0;
+  width:3px;
+  height:100%;
+  background:linear-gradient(#00c6ff,#0072ff);
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(12px);
+  padding:30px;
+  margin:0 0 50px 100px;
+  border-radius:14px;
+  opacity:0;
+  transform:translateY(80px);
+  transition:0.8s ease;
+  position:relative;
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  left:-62px;
+  top:35px;
+  width:18px;
+  height:18px;
+  background:#00c6ff;
+  border-radius:50%;
+  box-shadow:0 0 15px #00c6ff;
+}
+
+.match-type{
+  font-size:1.2rem;
+  font-weight:700;
+  color:#00c6ff;
+}
+
+.date{
+  float:right;
+  opacity:.8;
+}
+
+.teams{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin:20px 0;
+  font-size:2rem;
+  font-weight:800;
+}
+
+.teams img{
+  width:48px;
+  filter:drop-shadow(0 0 6px rgba(255,255,255,.6));
+}
+
+.time{
+  font-size:1.1rem;
+  opacity:.9;
+}
+
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{font-size:2.6rem}
+  .section-title{font-size:2rem}
+  .timeline::before{left:20px}
+  .card{margin-left:60px}
+  .card::before{left:-42px}
+  .teams{font-size:1.4rem}
+  .teams img{width:36px}
+}
